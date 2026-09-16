@@ -1675,18 +1675,9 @@ const Stage = (function(){
    ========================================================================== */
 
 /* ── Option C: connected to the live Odoo store — login, cart & checkout run on Odoo ── */
-const ODOO = "https://jabalwater.com";
-const ODOO_URL = {
-  g7:   "/shop/jw-007-jabal-water-7l-gallon-61",
-  g11:  "/shop/jw-011-jabal-water-11l-gallon-62",
-  g185: "/shop/18-5l-jabal-water-gallon-new-86",
-  p7:   "/shop/jw-27001-jabal-utillity-2x7l-pure-water-packs-perfect-for-cooking-and-travel-63",
-  p11:  "/shop/jw-21101-jabal-utility-2x11l-pure-water-packs-perfect-for-cooking-and-travel-58",
-  mega: "/shop/jw-18555-jabal-mega-saver-buy-5-and-get-5-refills-for-free-59",
-  free: "/shop"
-};
+const ODOO = "https://jabal-water2.odoo.com";                       // JABAL Odoo Online store
 function odooGo(path){ window.location.href = ODOO + path; }        // hand off to the Odoo store
-function odooProduct(id){ odooGo(ODOO_URL[id] || "/shop"); }
+function odooProduct(id){ odooGo("/shop"); }                       // open the storefront (slugs differ on the new instance)
 
 const PRODUCTS = [
   // ── Gallons · single bottle ──
