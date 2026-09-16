@@ -460,6 +460,9 @@ html[dir="rtl"] .foot-grid h4{ letter-spacing:0; text-transform:none; }
 .socials a{ width:40px; height:40px; border-radius:11px; background:rgba(255,255,255,.08); display:grid; place-items:center; color:#fff; transition:.25s; padding:0; }
 .socials a:hover{ background:var(--grad-pink); transform:translateY(-3px); }
 .foot-bot{ display:flex; justify-content:space-between; align-items:center; gap:16px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); flex-wrap:wrap; font-size:13px; color:#93a6cc; }
+.foot-bot-r{ display:flex; align-items:center; gap:18px; }
+.foot-admin{ color:#93a6cc; text-decoration:none; opacity:.7; border:1px solid rgba(255,255,255,.16); padding:4px 12px; border-radius:999px; transition:opacity .2s, border-color .2s; }
+.foot-admin:hover{ opacity:1; border-color:rgba(143,208,255,.5); color:#cfe4ff; }
 
 /* ============================================================
    CART DRAWER
@@ -950,7 +953,10 @@ html[dir="rtl"] .rail-item .label{ transform:translateX(-8px); }
     </div>
     <div class="foot-bot">
       <span>© <span id="year"></span> JABAL High Quality Water. <span data-i18n="foot_rights">All rights reserved.</span></span>
-      <span data-i18n="foot_made">Pure &amp; Simple 💧</span>
+      <span class="foot-bot-r">
+        <a href="https://www.odoo.com/web/login" target="_blank" rel="noopener" class="foot-admin" data-i18n="foot_admin">Admin login</a>
+        <span data-i18n="foot_made">Pure &amp; Simple 💧</span>
+      </span>
     </div>
   </div>
 </footer>
@@ -1017,7 +1023,7 @@ const I18N = {
     f_msg:"Message", f_msg_ph:"How can we help?", f_send:"Send message", f_ok:"Thank you — we'll be in touch shortly. 💧",
     foot_tag:"At Jabal, we're dedicated to providing pure, high-quality water — freshly filled on order. Our commitment to quality and sustainability, in every drop.",
     foot_gallons:"Gallons", foot_packs:"Utility Packs", foot_offers:"Offers", foot_location:"Store No. G043, All Seasons Park Mall, Madinaty",
-    foot_rights:"All rights reserved.", foot_made:"Pure & Simple 💧",
+    foot_rights:"All rights reserved.", foot_made:"Pure & Simple 💧", foot_admin:"Admin login",
     cart_title:"Your Cart", cart_total:"Total", cart_checkout:"Checkout", cart_empty:"Your cart is empty",
     add_to_cart:"Add to cart", order_now:"Order on our store", view_store:"Visit our full store", vat_note:"Prices include 14% VAT", sold_out:"Sold out", offer:"OFFER", new:"NEW", best:"BEST VALUE",
     all:"All", gallons:"Gallons", packs:"Packs", offers:"Offers", accessories:"Accessories",
@@ -1061,7 +1067,7 @@ const I18N = {
     f_msg:"رسالتك", f_msg_ph:"كيف يمكننا مساعدتك؟", f_send:"إرسال الرسالة", f_ok:"شكرًا لك — سنتواصل معك قريبًا. 💧",
     foot_tag:"في جبل، نلتزم بتقديم مياه نقية عالية الجودة — تُعبأ طازجة عند الطلب. التزامنا بالجودة والاستدامة، في كل قطرة.",
     foot_gallons:"الجالونات", foot_packs:"عبوات الاستخدام", foot_offers:"العروض", foot_location:"محل G043، أول سيزون بارك مول، مدينتي",
-    foot_rights:"جميع الحقوق محفوظة.", foot_made:"نقي وبسيط 💧",
+    foot_rights:"جميع الحقوق محفوظة.", foot_made:"نقي وبسيط 💧", foot_admin:"دخول الإدارة",
     cart_title:"سلتك", cart_total:"الإجمالي", cart_checkout:"إتمام الشراء", cart_empty:"سلتك فارغة",
     add_to_cart:"أضف إلى السلة", order_now:"اطلب من متجرنا", view_store:"زيارة المتجر الكامل", vat_note:"الأسعار شاملة ضريبة القيمة المضافة 14%", sold_out:"غير متوفر", offer:"عرض", new:"جديد", best:"أفضل قيمة",
     all:"الكل", gallons:"الجالونات", packs:"العبوات", offers:"العروض", accessories:"إكسسوارات",
