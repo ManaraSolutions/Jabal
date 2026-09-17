@@ -954,7 +954,7 @@ html[dir="rtl"] .rail-item .label{ transform:translateX(-8px); }
     <div class="foot-bot">
       <span>© <span id="year"></span> JABAL High Quality Water. <span data-i18n="foot_rights">All rights reserved.</span></span>
       <span class="foot-bot-r">
-        <a href="https://www.odoo.com/web/login" target="_blank" rel="noopener" class="foot-admin" data-i18n="foot_admin">Admin login</a>
+        <a href="https://jabalwater.com/web" target="_blank" rel="noopener" class="foot-admin" data-i18n="foot_admin">Admin login</a>
         <span data-i18n="foot_made">Pure &amp; Simple 💧</span>
       </span>
     </div>
@@ -1681,7 +1681,7 @@ const Stage = (function(){
    ========================================================================== */
 
 /* ── Option C: connected to the live Odoo store — login, cart & checkout run on Odoo ── */
-const ODOO = "https://jabal-water2.odoo.com";                       // JABAL Odoo Online store
+const ODOO = "https://jabalwater.com";                              // original self-hosted Odoo store (jabal-water2 online instance no longer exists)
 function odooGo(path){ window.location.href = ODOO + path; }        // hand off to the Odoo store
 function odooProduct(id){ odooGo("/shop"); }                       // open the storefront (slugs differ on the new instance)
 const CUSTOMER_LOGIN = "https://jabalwater.com/web#action=123&cids=1&menu_id=81";  // customers sign in on the original Odoo
