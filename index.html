@@ -701,7 +701,7 @@ html[dir="rtl"] .rail-item .label{ transform:translateX(-8px); }
       <span class="sep">/</span>
       <span role="button" data-lang="ar" onclick="setLang('ar')">ع</span>
     </div>
-    <button class="btn ghost mobile-hide" onclick="odooGo('/web/login')" data-i18n="nav_login">Login</button>
+    <button class="btn ghost mobile-hide" onclick="customerLogin()" data-i18n="nav_login">Login</button>
     <button class="btn cart-btn pink" onclick="openCart()" aria-label="Cart" style="color:#fff">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6 5 3H2"/></svg>
       <span class="cart-count" id="cartCount">0</span>
@@ -718,7 +718,7 @@ html[dir="rtl"] .rail-item .label{ transform:translateX(-8px); }
   <a onclick="scrollToId('tech');toggleMenu()" data-i18n="nav_tech">Process</a>
   <a onclick="scrollToId('shop');toggleMenu()" data-i18n="nav_shop">Shop</a>
   <a onclick="scrollToId('contact');toggleMenu()" data-i18n="nav_contact">Contact Us</a>
-  <button class="btn primary" onclick="odooGo('/web/login')" data-i18n="nav_login">Login</button>
+  <button class="btn primary" onclick="customerLogin()" data-i18n="nav_login">Login</button>
 </div>
 
 <!-- Floating WhatsApp contact button -->
@@ -884,7 +884,7 @@ html[dir="rtl"] .rail-item .label{ transform:translateX(-8px); }
         <span class="eyebrow"><span class="dot"></span><span data-i18n="loy_eyebrow">Loyalty Rewards</span></span>
         <h2 style="margin:16px 0 16px" data-i18n="loy_h2">Every 6th gallon is on us</h2>
         <p data-i18n="loy_p">Collect a stamp with every 18.9 L gallon you order. Buy 5 — the 6th is completely free. Ask for your JABAL loyalty card with your next delivery.</p>
-        <button class="btn primary" onclick="odooGo('/web/login')" data-i18n="loy_cta">Get your card</button>
+        <button class="btn primary" onclick="customerLogin()" data-i18n="loy_cta">Get your card</button>
       </div>
       <div class="loyalty-card-wrap reveal">
         <div class="loyalty-rotator" id="loyaltyRotator" aria-label="JABAL Loyalty Card">
@@ -1684,6 +1684,8 @@ const Stage = (function(){
 const ODOO = "https://jabal-water2.odoo.com";                       // JABAL Odoo Online store
 function odooGo(path){ window.location.href = ODOO + path; }        // hand off to the Odoo store
 function odooProduct(id){ odooGo("/shop"); }                       // open the storefront (slugs differ on the new instance)
+const CUSTOMER_LOGIN = "https://jabalwater.com/ar/web/login";       // customers sign in on the original Odoo
+function customerLogin(){ window.location.href = CUSTOMER_LOGIN; }
 
 const PRODUCTS = [
   // ── Gallons · single bottle ──
