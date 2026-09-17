@@ -1684,7 +1684,7 @@ const Stage = (function(){
 const ODOO = "https://jabal-water2.odoo.com";                       // JABAL Odoo Online store
 function odooGo(path){ window.location.href = ODOO + path; }        // hand off to the Odoo store
 function odooProduct(id){ odooGo("/shop"); }                       // open the storefront (slugs differ on the new instance)
-const CUSTOMER_LOGIN = "https://jabalwater.com/ar/web/login";       // customers sign in on the original Odoo
+const CUSTOMER_LOGIN = "https://jabalwater.com/web#action=123&cids=1&menu_id=81";  // customers sign in on the original Odoo
 function customerLogin(){ window.location.href = CUSTOMER_LOGIN; }
 
 const PRODUCTS = [
